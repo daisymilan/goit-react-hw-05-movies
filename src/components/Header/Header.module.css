@@ -1,0 +1,19 @@
+.header {
+  background-color: #333;
+  padding: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.linkActive {
+  font-weight: bold;
+}
