@@ -4,11 +4,18 @@ import { MovieListItem } from 'components/MovieListItem/MovieListItem';
 
 export const MovieList = ({ movies }) => {
   return (
-    <ul className={css.movieList}>
-      {movies.map(({ id, title }) => (
-        <MovieListItem key={id} id={id} title={title} />
-      ))}
-    </ul>
+    <div className={css.movieListContainer}>
+      <ul className={css.movieList}>
+        {movies.map(({ id, title, poster_path }) => (
+          <MovieListItem
+            key={id}
+            id={id}
+            title={title}
+            posterPath={poster_path}
+          />
+        ))}
+      </ul>
+    </div>
   );
 };
 
@@ -17,6 +24,7 @@ MovieList.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       id: PropTypes.number.isRequired,
+      poster_path: PropTypes.string, 
     })
   ).isRequired,
 };

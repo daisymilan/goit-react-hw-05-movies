@@ -1,0 +1,21 @@
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .castList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .noCast {
+    font-size: 1rem;
+    color: #888;
+    margin-top: 16px;
+  }
+  

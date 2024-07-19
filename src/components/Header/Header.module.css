@@ -1,19 +1,29 @@
 .header {
-  background-color: #333;
-  padding: 10px;
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
 }
 
-.nav {
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.link {
+.navItem {
+  margin: 0 15px;
+}
+
+.navLink {
   color: white;
   text-decoration: none;
-  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.linkActive {
-  font-weight: bold;
+.navLink:hover {
+  text-decoration: underline;
 }

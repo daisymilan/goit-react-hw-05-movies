@@ -1,25 +1,26 @@
 import PropTypes from 'prop-types';
+import css from './CastListItem.module.css';
+import { Link } from 'react-router-dom';
 
-export const CastListItem = ({ profilePath, originalName, name }) => {
+export const CastListItem = ({ id, profilePath, originalName, name, character }) => {
   return (
-    <li>
+    <li className={css.castItem}>
       <img
-        width="200"
-        height="300"
-        src={
-          profilePath
-            ? `https://image.tmdb.org/t/p/w300${profilePath}`
-            : `https://fakeimg.pl/600x400?text=No+Image+Available`
-        }
-        alt={originalName}
+        className={css.profileImage}
+        src={profilePath ? `https://image.tmdb.org/t/p/w300${profilePath}` : 'https://via.placeholder.com/300'}
+        alt={name}
       />
-      <p>{name}</p>
+      <h3>{name}</h3>
+      <p>{originalName}</p>
+      <p>{character}</p>
     </li>
   );
 };
 
 CastListItem.propTypes = {
-  profilePath: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  id: PropTypes.number.isRequired,
+  profilePath: PropTypes.string,
   originalName: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  character: PropTypes.string.isRequired,
 };

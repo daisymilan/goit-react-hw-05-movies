@@ -5,8 +5,20 @@
 .input {
   width: 100%;
   padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 .buttonWrapper {
-  margin: 10px 0;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
 }
