@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import css from './CastListItem.module.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export const CastListItem = ({ id, profilePath, originalName, name, character }) => {
   return (
